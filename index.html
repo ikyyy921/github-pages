@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jadwal Sholat dan Absen Mengaji</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Jadwal Sholat dan Absen Mengaji</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Waktu</th>
+                    <th>Sholat</th>
+                    <th>Absen Mengaji</th>
+                    <th>Puasa</th>
+                    <!-- <th>Tidak Puasa</th> -->
+                </tr>
+            </thead>
+            <tbody id="jadwal">
+                <tr>
+                    <td>05:00</td>
+                    <td>Sholat Subuh</td>
+                    <td><button onclick="absen('Subuh')">Absen</button></td>
+                    <td><input type="checkbox" id="puasa-subuh"></td>
+                </tr>
+                <tr>
+                    <td>12:00</td>
+                    <td>Sholat Dzuhur</td>
+                    <td><button onclick="absen('Dzuhur')">Absen</button></td>
+                    <td><input type="checkbox" id="puasa-dzuhur"></td>
+                </tr>
+                <tr>
+                    <td>15:30</td>
+                    <td>Sholat Ashar</td>
+                    <td><button onclick="absen('Ashar')">Absen</button></td>
+                    <td><input type="checkbox" id="puasa-ashar"></td>
+                </tr>
+                <tr>
+                    <td>18:00</td>
+                    <td>Sholat Maghrib</td>
+                    <td><button onclick="absen('Maghrib')">Absen</button></td>
+                    <td><input type="checkbox" id="puasa-maghrib"></td>
+                </tr>
+                <tr>
+                    <td>19:30</td>
+                    <td>Sholat Isya</td>
+                    <td><button onclick="absen('Isya')">Absen</button></td>
+                    <td><input type="checkbox" id="puasa-isya"></td>
+                </tr>
+            </tbody>
+            
+        </table>
+        <form>
+            <label for="imamName">Nama Ustazd Imam:</label>
+            <input type="text" id="imamName" name="imamName" placeholder="Masukkan nama ustazd" required>
+            
+            <button type="submit">Kirim</button>
+        </form>
+        <h2>Catatan Absen</h2>
+        <ul id="catatan-absen"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
